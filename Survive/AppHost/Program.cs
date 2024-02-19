@@ -9,7 +9,7 @@ var surviveDbName = "survive";
     // Add the default database to the application model so that it can be referenced by other resources.
     .AddDatabase(surviveDbName);*/
 
-var postgresdb2 = builder.AddPostgres("pg")
+var postgresdb2 = builder.AddPostgres(surviveDbName)
                         .AddDatabase("postgresdb");
 
 builder.AddProject<Projects.Survive_Api>("survive.api")
