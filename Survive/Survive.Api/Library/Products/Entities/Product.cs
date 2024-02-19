@@ -9,15 +9,12 @@ namespace Survive.Api.Library.Products.Entities
         public string Name { get; set; }
         public string Description { get; set; }
 
-        private Product()
-        {
+        private Product() { }
 
-        }
         public Product(string name, string description)
         {
             Name = name;
             Description = description;
         }
-
     }
 }

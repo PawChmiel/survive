@@ -7,6 +7,7 @@ namespace Survive.Api.Database
     {
         public DbSet<Product> Products { get; set; }
 
-        public MainDbContext(DbContextOptions<MainDbContext> options) : base(options) { }
+        public MainDbContext(DbContextOptions<MainDbContext> options)
+            : base(options) { }
     }
 }

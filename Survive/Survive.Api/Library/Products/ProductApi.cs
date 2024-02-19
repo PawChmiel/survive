@@ -9,17 +9,18 @@ namespace Survive.Api.Library.Products
         {
             var api = app.MapGroup("product").RequireAuthorization();
 
-            api.MapPost("/", async (MainDbContext db) =>
-            {
-                var product = new Product("sample", "sample");
-                await db.Products.AddAsync(product);
+            api.MapPost(
+                "/",
+                async (MainDbContext db) =>
+                {
+                    var product = new Product("sample", "sample");
+                    await db.Products.AddAsync(product);
 
-                await db.SaveChangesAsync();
+                    await db.SaveChangesAsync();
 
-                return Results.Created($"/product/{product.Id}", product);
-            });
-
+                    return Results.Created($"/product/{product.Id}", product);
+                }
+            );
         }
     }
-
 }
