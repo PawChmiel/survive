@@ -2,13 +2,13 @@
 using Survive.Api.Database;
 using Survive.Api.Library.Products.Entities;
 
-namespace Survive.Api.Library.Products
+namespace Survive.Api.Library.Places
 {
-    public static class ProductApi
+    public static class PlaceApi
     {
         public static void Register(WebApplication app, WebApplicationBuilder builder)
         {
-            const string name = "product";
+            const string name = "place";
             RouteGroupBuilder api = BaseApi.RegisterBase(app, name);
 
             api.MapPost(
